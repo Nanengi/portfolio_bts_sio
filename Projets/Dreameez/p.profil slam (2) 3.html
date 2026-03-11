@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Dreameez</title>
+    <style>
+        /* Style global */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #9bedf8;
+            color: #333;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .profile {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid #3498db;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .username {
+            margin: 0;
+            font-size: 24px;
+            color: #3498db;
+        }
+
+        .stats {
+            display: flex;
+            gap: 15px;
+            margin: 10px 0;
+        }
+
+        .stats div {
+            font-size: 14px;
+        }
+
+        .edit-profile {
+            padding: 8px 15px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .edit-profile:hover {
+            background-color: #2980b9;
+        }
+
+        .bio {
+            margin-top: 15px;
+            font-style: italic;
+            color: #555;
+        }
+         /* Mode sombre */
+         body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        header.dark-mode {
+            background-color: #1e1e1e;
+        }
+
+        .profile.dark-mode {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        .profile-pic.dark-mode {
+            border-color: #555;
+        }
+
+        .edit-profile.dark-mode {
+            background-color: #555;
+            color: #e0e0e0;
+        }
+
+        .edit-profile.dark-mode:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="./dreameezpage1 (2).html" style="text-decoration: none; color: #fff">Dreameez</a>
+        </div>
+        <button id="toggle-dark-mode" style="float: right; padding: 10px; background-color: #fff; color: #333; border: none; border-radius: 5px; cursor: pointer;">
+            Mode Sombre
+        </button>
+    </header>
+    <main>
+        <section class="profile">
+            <div class="profile-header">
+                <img src="./IMAGES/d4fdaae2-32bb-4466-9a7c-ba4f5d0fc575.jpg" alt="Profile Picture" class="profile-pic" id="profile-pic">
+                <div class="profile-info">
+                    <h1 class="username" id="username">@Xenofroz</h1>
+                    <div class="stats">
+                        <div><strong id="posts-count">10</strong> Posts</div>
+                        <div><strong id="followers-count">200</strong> Followers</div>
+                        <div><strong id="following-count">180</strong> Following</div>
+                    </div>
+                    <button class="edit-profile" id="edit-profile-btn">Edit your profile</button>
+                </div>
+            </div>
+            <div class="bio">
+                <p id="bio-text">Aime organiser des pool party!</p>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        // Variables
+        const profilePic = document.getElementById('profile-pic');
+        const usernameElement = document.getElementById('username');
+        const bioElement = document.getElementById('bio-text');
+        const editProfileBtn = document.getElementById('edit-profile-btn');
+        const postsCount = document.getElementById('posts-count');
+        const followersCount = document.getElementById('followers-count');
+        const followingCount = document.getElementById('following-count');
+
+        // Changer l'image de profil
+        profilePic.addEventListener('click', () => {
+            const newPic = prompt('Entrez l’URL de la nouvelle image de profil :');
+            if (newPic) {
+                profilePic.src = newPic;
+            }
+        });
+
+        // Modifier le profil
+        editProfileBtn.addEventListener('click', () => {
+            const newUsername = prompt('Entrez votre nouveau nom d’utilisateur :', usernameElement.textContent);
+            const newBio = prompt('Modifiez votre bio :', bioElement.textContent);
+
+            if (newUsername) {
+                usernameElement.textContent = newUsername;
+            }
+            if (newBio) {
+                bioElement.textContent = newBio;
+            }
+        });
+
+        // Compteur dynamique des statistiques
+        let posts = parseInt(postsCount.textContent);
+        let followers = parseInt(followersCount.textContent);
+        let following = parseInt(followingCount.textContent);
+
+        setInterval(() => {
+            posts += 1;
+            followers += Math.floor(Math.random() * 5);
+            following += Math.floor(Math.random() * 3);
+
+            postsCount.textContent = posts;
+            followersCount.textContent = followers;
+            followingCount.textContent = following;
+        }, 5000); // Met à jour toutes les 5 secondes
+
+        const darkModeButton = document.getElementById('toggle-dark-mode');
+        const body = document.body;
+        const header = document.querySelector('header');
+        const profile = document.querySelector('.profile');
+        const editButton = document.querySelector('.edit-profile');
+        
+         // Basculer le mode sombre
+         darkModeButton.addEventListener('click', () => {
+            const isDarkMode = body.classList.toggle('dark-mode');
+            header.classList.toggle('dark-mode');
+            profile.classList.toggle('dark-mode');
+            editButton.classList.toggle('dark-mode');
+            
+            // Changer le texte du bouton
+            darkModeButton.textContent = isDarkMode ? 'Mode Clair' : 'Mode Sombre';
+        });
+    </script>
+</body>
+</html>

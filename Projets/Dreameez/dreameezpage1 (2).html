@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreameez</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fffadd;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            
+    
+        }
+
+        .splash-screen {
+            text-align: center;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .splash-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        
+        .content {
+            display: none;
+            text-align: center;
+;
+            
+        }
+
+        .content.visible {  
+            display: block;
+           
+        }
+        a:link, a:visited {
+  background-color: #fffadd;
+  color: rgb(41, 184, 246);
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+a:link, a:visited {
+  background-color: #3498db;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+   
+    </style>
+</head>
+<body>
+
+    <div class="splash-screen" id="splash-screen">
+        <img src="./IMAGES/e9df70aa-e2b7-4e69-9dc0-a50ad2fe9bd3.jpg" alt="Logo du site" class="logo">
+        
+    </div>
+
+    <div class="content" id="content">
+        <a href="./formulaire_con (1) 1.html" style="text-decoration: none; color: #fff"target="_blank">Commencer a rêver! </a>
+        <a href="./formulaire _insc 1.html" style="text-decoration: none; color: #fff">Voulez vous rêver ?</a>
+       
+    </div>
+
+    <script>
+        // Attendre 3 secondes avant de cacher l'écran de chargement
+        setTimeout(() => {
+            const splashScreen = document.getElementById('splash-screen');
+            const content = document.getElementById('content');
+
+            // Ajouter une classe pour la transition et afficher le contenu principal
+            splashScreen.classList.add('hidden');
+            setTimeout(() => {
+                splashScreen.style.display = 'none';
+                content.classList.add('visible');
+            }, 1000); // Correspond au temps de transition CSS
+        }, 3000); // Temps d'affichage de l'écran de chargement
+
+    </script>
+
+</body>
+</html>
