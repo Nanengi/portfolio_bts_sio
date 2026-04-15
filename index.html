@@ -1,136 +1,134 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - Gina Banen</title>
-  <link rel="stylesheet" href="style.css" />
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gina Banen - Portfolio BTS SIO SLAM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="custom-cursor"></div>
-
-  
-
-  <div id="loading-screen">
-    <div class="spinner"></div>
-    <p class="loading-text">Chargement en cours...</p>
-  </div>
-  <header class="navbar transparent">
-    
-    <nav class="nav-links">
-      <a href="#home">Accueil</a>
-      <a href="#about">Profil</a>
-      <a href="#skills">Compétences</a>
-      <a href="./images/veille technologique.pdf">Veille technologique</a>
-      <a href="./Parcours.html">Parcours</a>
-    </nav>
-  </header>
-
-  <section id="home" class="fade-in hero">
-    
-    <div class="hero-content">
-      <h1 class="typewriter-text" data-phrases='[".Gina Banen"]'>Gina Banen</h1>
-    <h2>Développeuse web junior</h2>
-    <a href="#about" class="btn1">Qui-suis-je ?</a>
+<aside class="sidebar">
+    <div class="geometric-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
     </div>
-  </section>
 
+    <nav>
+        <ul>
+            <li><a href="index.html#accueil" class="active"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="index.html#profil"><i class="fas fa-user"></i> Profil</a></li>
+            <li><a href="index.html#parcours"><i class="fa-solid fa-graduation-cap"></i> Parcours</a></li>
+            <li><a href="index.html#competences"><i class="fas fa-tools"></i> Compétences</a></li>
+            <li><a href="certifications.html"><i class="fas fa-certificate"></i> Certifications</a></li>
+            <li><a href="veille-technologique.html"><i class="fa-solid fa-bell"></i> Veille Technologique</a></li>
+            <li><a href="projets.html"><i class="fas fa-code"></i> Projets</a></li>
+            <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
 
-  <section id="about" class="section moi">
-    <h2 class="about-title">A propos de moi <span id="typing-effect"></span></h2>
-    <div class="about-content">
-      <div class="about-text">
-    <p>
-      Salut ! Je m’appelle Gina Banen, Développeuse web junior.
+    <div class="social-links">
+        <a href="https://github.com/Nanengi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/gina-banen/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <div class="copyright">
+        <p>2026 Gina Banen</p>
+    </div>
+</aside>
+
+<main class="content">
+    <section id="accueil" class="section">
+        <div class="animation-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300" class="animated-svg desktop-svg">
+                <style>
+                    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+                    .text-path { fill: transparent; stroke-dasharray: 2000; stroke-dashoffset: 2000; font-family: 'Comfortaa', sans-serif; text-anchor: middle; }
+                    .title { font-size: 64px; font-weight: bold; stroke: #ff4da6; stroke-width: 2; animation: draw 20s forwards, fill_title 1s forwards 3s; }
+                    .subtitle { font-size: 24px; stroke: #ffffff; stroke-width: 1; animation: draw 20s forwards 2s, fill_subtitle 1s forwards 3s; }
+                    @keyframes draw { to { stroke-dashoffset: 0; } }
+                    @keyframes fill_title { from { fill: transparent; } to { fill: #ff4da6; } }
+                    @keyframes fill_subtitle { from { fill: transparent; } to { fill: #ffffff; } }
+                </style>
+                <text x="400" y="150" class="text-path title">Gina Banen </text>
+                <text x="400" y="210" class="text-path subtitle">Étudiante en BTS SIO - Option SLAM</text>
+            </svg>
+        </div>
+        </section>
+
+    <section id="profil" class="section">
+        <h2>Profil</h2>
+        <div class="profile-content">
+            <p>
+      Je m’appelle Gina Banen, étudiante en BTS SIO - Option SLAM.
       </p>
       <p>
-    Auparavant, j’ai eu mon baccalauréat et plusieurs expériences professionnelles avant de réellement trouver ma voie ce qui m’a permis d’acquérir de très bonnes compétences telles que l’organisation, l’écoute, le conseil ainsi que des qualités relationnelles importantes.
+    j’ai eu mon baccalauréat et plusieurs expériences professionnelles avant de réellement trouver ma voie ce qui m’a permis d’acquérir de très bonnes compétences telles que l’organisation, l’écoute ainsi que des qualités relationnelles importantes.
     </p>
     <p> 
-      Je suis une personne créative et qui aime être polyvalente, je suis également très motivée dans tout ce que j'entreprends.
+      Je suis une personne créative et qui aime être polyvalente.
       J’ai donc suivi la formation BTS SIO au sein de l'IPSSI Campus de Paris. Je suis donc en quête de mon Bac+2, où j'espère y décrocher mon diplôme.</div>
+           
+    </div>
             
-    </div>
-  </section>
-  <div class="cv-preview">
-        <a href="./images/gina-banen-cv (1).pdf" class="btn" download>Mon CV</a>
-      </div>
-
-
-  <section id="skills" class="section skills-section fade-in">
-    <h2>Compétences</h2>
-    
-    <div class="skills-container">
-      <div class="skills-bars">
-       
-        <div class="skill"><span>HTML5/CSS3</span><div class="bar"><div style="width: 90%"></div></div></div>
-        <div class="skill"><span>Javascript</span><div class="bar"><div style="width: 85%"></div></div></div>
-        <div class="skill"><span>PHP 5</span><div class="bar"><div style="width: 75%"></div></div></div>
-        <div class="skill"><span>Python</span><div class="bar"><div style="width: 80%"></div></div></div>
-        <div class="skill"><span>MySQL</span><div class="bar"><div style="width: 85%"></div></div></div>
-        <div class="skill"><span>Github</span><div class="bar"><div style="width: 80%"></div></div></div>
-      </div>
-  
-      
-    </div>
-  </section>
-  
-
-  <section id="projets" >
-    <h2>🚀 Projets </h2>
-    <div class="projet-grid">
-      <div class="projet">
-        <h3><strong><a href="./Projets/Annuaire téléphonique web/index.html">Annuaire Téléphonique web</a></strong></h3>
-        <img src="./images/annuaire tél img.png" alt="">
-        <p>Mise en place d'un annuaire téléphonique pour une entreprise</p>
-      </div>
-
-      <div class="projet">
-        <h3><strong><a href="./Projets/Dreameez/dreameezpage1 (2).html">Dreameez</a></strong></h3>
-        <img src="./images/dremezz img.jpg" alt="">
-        <p>Création réseaux social</p>
-      </div>
-
-    </div>
-
-    
+        </div>
     </section>
-  
-  
 
- 
- 
+    <section id="parcours" class="section">
+        <h2>Parcours</h2>
+        <div class="parcours-container">
+            <div class="parcours-column">
+                <h3><i class="fas fa-graduation-cap"></i> Parcours Scolaire</h3>
+                <div class="timeline">
+                    <div class="timeline-item"><div class="timeline-date">sept 2024 - Aujourd'hui</div><div class="timeline-content"><h3>BTS SIO - Option SLAM</h3><p>Ipssi Formation Paris</p></div></div>
+                    <div class="timeline-item"><div class="timeline-date">sept 2021 - juin 2024</div><div class="timeline-content"><h3>BAC générale</h3><p>Lycée Jean Rostand Villepinte</p></div></div>
+                    </div>
+            </div>
+            <div class="parcours-column">
+                <h3><i class="fas fa-briefcase"></i> Parcours Professionnel</h3>
+                <div class="timeline">
+                    <div class="timeline-item"><div class="timeline-date">Janvier 2025 - Mars 2025</div><div class="timeline-content"><h3>Stage BTS SIO (2ème année)</h3><p>CEDRIC NGAKAM CONSULTING </p></div></div>
+                    <div class="timeline-item"><div class="timeline-date">Avril 2025 - juin 2025</div><div class="timeline-content"><h3>Stage BTS SIO (1ère année)</h3><p>Cos cmpr Bobigny</p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  
-  <button onclick="scrollToTop()" id="scrollTopBtn" style="
-  display: none;
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  z-index: 99;
-  border: none;
-  outline: none;
-  background-color: #d450a2;
-  color: var(text-color);
-  cursor: pointer;
-  padding: 12px 16px;
-  border-radius: 8px;
-  font-size: 16px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-">
-  ↑ Haut
-</button>
+    <section id="competences" class="section">
+        <h2>Compétences</h2>
+        <div class="skills-wrapper">
+            <div class="skill-category"><h3><i class="fas fa-code"></i> Développement Web</h3>
+                <div class="skills-grid"><div class="skill-card"><i class="fab fa-html5 skill-icon"></i><span>HTML5</span></div>
+                <div class="skill-card"><i class="fab fa-css3-alt skill-icon"></i><span>CSS3</span></div>
+                <div class="skill-card"><i class="fab fa-js skill-icon"></i><span>Javascript</span></div>
+                <div class="skill-card"><i class="fab fa-php skill-icon"></i><span>PHP</span></div>
+                <div class="skill-card"><i class="fas fa-database skill-icon"></i><span>SQL</span></div>
+                <div class="skill-card"><i class="fa-brands fa-react"></i><span>REACT</span></div>
+                </div>
+
+            
+                <div class="skill-category"><h3><i class="fas fa-tools"></i> Outils</h3><div class="skills-grid"><div class="skill-card"><i class="fas fa-code-branch skill-icon"></i><span>Git/GitHub</span></div>
+                <div class="skill-card"><i class="fas fa-terminal skill-icon"></i><span>VS Code</span></div>
+                <div class="skill-card"><i class="fas fa-server skill-icon"></i><span>Xampp</span></div>
+            
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Mes coordonnées</h3>
+                <p><i class="fas fa-envelope"></i> ginabanen05@gmail.com</p>
+                <p><i class="fas fa-phone"></i> 07 67 82 80 09</p>
+            </div>
+            
+        </div>
+    </section>
+</main>
 
 
-
-<footer class="footer">
-  &copy; Gina Banen - Portfolio SLAM 2026
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
-
-<script src="script.js"></script>
 </body>
 </html>
